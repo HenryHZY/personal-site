@@ -52,28 +52,26 @@
 </p>
 
 <p>
-    <!-- 📣 <font style="color: red;">I will graduate in Spring 2027 and actively seeking industry positions in multimodal understanding and reasoning. Please feel free to reach out if you are recruiting:)</font> -->
-    📣 <font color="#FF8C00">I will graduate in Spring 2027 and actively seeking industry positions in multimodal understanding and reasoning. Please feel free to reach out if you are recruiting:)</font>
+    📣 <font color="#FF8C00">I expect to graduate in Spring 2027 and am actively seeking industry opportunities in Multimodal AI. Please feel free to reach out if you are hiring!</font>
 </p>
 
 <hr>
 
 <h3 id="research-interests">📖 Research Interests</h3> 
-    <!-- My research interests lie in Multimodal Large Language Models (MLLMs), with a focus on enhancing their effectiveness and efficiency in multimodal understanding and reasoning. -->
-    My research interests lie in Multimodal Large Language Models (MLLMs), Multimodal Understanding, Multimodal Reasoning, LLM and MLLM Evaluation.
-
+    <!-- My research interests lie in Multimodal Large Language Models (MLLMs), Multimodal Understanding, Multimodal Reasoning, LLM and MLLM Evaluation. -->
+    <!-- My research focuses on Multimodal Large Language Models (MLLMs), particularly on efficient training and inference, multimodal understanding and reasoning, and model evaluation and benchmarking. -->
+    My research focuses on efficient and effective Multimodal Large Language Models (MLLMs), with particular interests in multimodal understanding and reasoning, efficient training and inference, and model evaluation and benchmarking.
 <h3 id="publications">📚 Selected Publications</h3> 
     (* denotes equal contribution.)
 
-<h4>Multimodal Understanding and Reasoning</h4>
-    
+<!-- <h4>Multimodal Understanding and Reasoning</h4> -->
+<h4>Efficient and Effective MLLMs</h4>
     <ul>
         <li> <a href="https://arxiv.org/abs/2606.22870">VideoLatent: Video-Language Learning via Latent Self-Forcing</a>
             <br><strong>Zi-Yuan Hu</strong>, Zicong Tang, Shijia Huang, Yanyang Li, Michael R. Lyu, Liwei Wang
             <ul>
                 <li>Preprint 2026 (Under Review)</li>
                 <li>[<a href="https://arxiv.org/abs/2606.22870">paper</a>][<a href="https://henryhzy.github.io/VideoLatent/">project</a>]</li>
-                <!-- <li>TL;DR: In this paper, we introduce VideoLatent, a novel MLLM equipped with a latent injection module tailored for video understanding and reasoning. Specifically, VideoLatent learns to perform visual latent reasoning using a new latent self-forcing training paradigm, which comprises latent alignment and latent diversity objectives, and relies solely on standard video-question-answer triplets.</li> -->
                 <li>TL;DR: We introduce VideoLatent, a novel MLLM that learns visual latent reasoning through a latent injection module and a new latent self-forcing training paradigm. Extensive experiments across 14 benchmarks covering general video understanding and complex video reasoning show that VideoLatent consistently outperforms existing standard and latent MLLMs, while reducing training/inference overhead by ~6x/~68x compared with Video-R1.</li>
                 <li style="text-align: center;"><img src="img/videolatent2.jpg" width="750"></li>
                 <li style="text-align: center;"><img src="img/videolatent.jpg" width="750"></li>
@@ -87,7 +85,6 @@
             <ul>
                 <li>Preprint 2026 (Under Review)</li>
                 <li>[<a href="pdf/SinkPruner.pdf">paper</a>]
-                <!-- <li>TL;DR: In this paper, we show that such high-norm outlier tokens are highly redundant in both feature and spatial dimensions, yet are often mistakenly preserved as informative cues by existing methods. Motivated by this observation, we propose SinkPruner, a training-free visual token pruning framework for efficient MLLM inference.</li> -->
                 <li>TL;DR: We identify high-norm outlier visual tokens as redundant attention sinks and propose SinkPruner, a training-free visual token pruning framework with a visual sanitizer and a text-guided pruner. Extensive experiments conducted on both image-language and video-language benchmarks demonstrate the strong efficiency and generalization of SinkPruner, preserving 96.5%/91.8% of the original performance under 89% token reduction on LLaVA-1.5/Qwen2.5-VL.</li>
                 <li style="text-align: center;"><img src="img/sinkpruner.jpg" width="750"></li>
             </ul>
@@ -100,7 +97,6 @@
             <ul>
                 <li>Preprint 2025 (Under Review)</li>
                 <li>[<a href="https://arxiv.org/abs/2512.09616">paper</a>][<a href="https://github.com/LaVi-Lab/Rethink_CoT_Video">code</a>]</li>
-                <!-- <li>TL;DR: In this paper, we design and validate an efficient post-training and inference framework that enhances a video MLLM's reasoning capability.</li> -->
                 <li>TL;DR: We revisit the role of CoT reasoning in video MLLMs and challenge the assumption that effective video reasoning requires long, human-like CoT traces. We introduce an efficient post-training and inference framework with concise reasoning and visual token compression, eliminating CoT annotations and SFT. Experiments conducted on general video, long video, and complex video benchmarks demonstrate that our framework achieves substantially improved inference efficiency and delivers competitive performance.</li>
                 <li style="text-align: center;"><img src="img/rethinking.jpg" width="750"></li>
             </ul>
@@ -113,7 +109,6 @@
             <ul>
                 <li>EMNLP 2024 Findings</li>
                 <li>[<a href="https://arxiv.org/abs/2410.05714">paper</a>][<a href="https://github.com/LaVi-Lab/TG-Vid">code</a>]</li>
-                <!-- <li>TL;DR: In this paper, we propose a Time Gating Video LLM (TG-Vid) designed to enhance temporal modeling through a novel Time Gating module (TG). The TG module employs a time gating mechanism on its sub-modules, comprising gating spatial attention, gating temporal attention, and gating MLP.</li> -->
                 <li>TL;DR: We propose TG-Vid, a VideoLLM with a Time Gating module that employs a time gating mechanism to spatial attention, temporal attention, and MLP. TG-Vid significantly outperforms SOTA VideoLLMs on temporal-sensitive benchmarks, surpassing ST-LLM by +1.5 on MVBench, +2.1 on TempCompass, +3.2 on NExT-QA ATP-hard, and +3.2 on NExT-QA Val.</li>
                 <li style="text-align: center;"><img src="img/tgvid.jpg" width="750"></li>
             </ul>
@@ -127,7 +122,6 @@
             <ul>
                 <li>EMNLP 2024 (Student First Author)</li>
                 <li>[<a href="https://arxiv.org/abs/2403.18252">paper</a>][<a href="https://github.com/LaVi-Lab/Visual-Table">code</a>]</li>
-                <!-- <li>TL;DR: In this paper, we propose Visual Table, a novel form of visual representation tailored for visual reasoning. Visual tables are constructed as hierarchical descriptions of visual scenes, featuring a scene description and multiple object-centric descriptions covering categories, attributes, and knowledge.</li> -->
                 <li>TL;DR: We introduce Visual Table, a novel form of visual representation tailored for visual reasoning. Visual tables are constructed as hierarchical descriptions of visual scenes, featuring a scene description and multiple object-centric descriptions covering categories, attributes, and knowledge. Extensive results on 11 visual reasoning benchmarks demonstrate that the generated visual tables significantly outperform previous structural and text-based representations.</li>
                 <li style="text-align: center;"><img src="img/visual_table.jpg" width="750"></li>
                 <li style="text-align: center;"><img src="img/visual_table2.jpg" width="750"></li>
@@ -141,7 +135,6 @@
             <ul>
                 <li>ICCV 2023</li>
                 <li>[<a href="https://arxiv.org/abs/2308.09804">paper</a>][<a href="https://github.com/HenryHZY/VL-PET">code</a>][<a href="https://henryhzy.github.io/VL-PET/">project</a>][<a href="https://github.com/HenryHZY/VL-PET/blob/main/ICCV2023_poster.pdf">poster</a>]</li>
-                <!-- <li>TL;DR: In this paper, we propose a Vision-and-Language Parameter-Efficient Tuning (VL-PET) framework to impose effective control over modular modifications via a novel granularity-controlled mechanism.</li> -->
                 <li>TL;DR: We propose VL-PET, a novel parameter-efficient fine-tuning framework tailored to vision-and-language tasks through a granularity-controlled mechanism. Experiments on both image-language and video-language tasks demonstrate the efficiency and effectiveness of VL-PET, which outperforms Adapter- and LoRA-based methods by up to 3.41% and 7.03%, respectively.</li>
                 <li style="text-align: center;"><img src="img/vlpet2.jpg" width="750"></li>
                 <li style="text-align: center;"><img src="img/vlpet.jpg" width="650"></li>
@@ -149,7 +142,7 @@
         </li>
     </ul>
 
-<h4>LLM and MLLM Evaluation</h4>
+<h4>Model Evaluation and Benchmarking</h4>
 
     <ul>
         <li> <a href="https://arxiv.org/abs/2509.24563">NeMo: Needle in a Montage for Video-Language Understanding</a>
@@ -157,7 +150,6 @@
             <ul>
                 <li>Preprint 2025 (Submitted to IJCV, Under Review)</li>
                 <li>[<a href="https://arxiv.org/abs/2509.24563">paper</a>][<a href="https://lavi-lab.github.io/NeMoBench">project</a>]</li>
-                <!-- <li>TL;DR: In this paper, inspired by the needle in a haystack test widely used by LLMs, we introduce a novel task of Needle in a Montage (NeMo), designed to assess VideoLLMs' critical reasoning capabilities, including long-context recall and temporal grounding.</li> -->
                 <li>TL;DR: Inspired by the needle in a haystack test widely used by LLMs, we introduce Needle in a Montage (NeMo), a novel task for assessing VideoLLMs' retrieval-based long-context recall and temporal grounding. We build NeMoBench with a scalable automated data generation pipeline, covering 31,378 QA pairs from 13,486 videos. Comprehensive evaluations are conducted on 20 SOTA models, providing extensive results and key insights into their capabilities and limitations. We are glad that NeMo is cited by <a href="https://arxiv.org/pdf/2511.04670">VSI-Super</a>.</li>
                 <li style="text-align: center;"><img src="img/nemo2.jpg" width="750"></li>
                 <li style="text-align: center;"><img src="img/nemo.jpg" width="750"></li>
@@ -171,7 +163,6 @@
             <ul>
                 <li>ICCV 2025</li>
                 <li>[<a href="https://arxiv.org/abs/2508.00518">paper</a>][<a href="https://github.com/LaVi-Lab/EgoMask">code</a>]</li>
-                <!-- <li>TL;DR: In this paper, we introduce EgoMask, the first pixel-level benchmark for fine-grained spatiotemporal grounding in egocentric videos.</li> -->
                 <li>TL;DR: We introduce EgoMask, the first pixel-level benchmark for fine-grained spatiotemporal grounding in egocentric videos, together with an automatic annotation pipeline and a large-scale training set spanning short-, medium-, and long-term videos. Experiments show that existing SOTA grounding models struggle on EgoMask, while fine-tuning on EgoMask-Train brings a 41.30% average relative improvement.</li>
                 <li style="text-align: center;"><img src="img/egomask.jpg" width="750"></li>
             </ul>
@@ -185,7 +176,6 @@
             <ul>
                 <li>EMNLP 2023 Demo</li>
                 <li>[<a href="https://arxiv.org/abs/2308.04813">paper</a>][<a href="https://github.com/lavi-lab/cleva">code</a>]</li>
-                <!-- <li>TL;DR: In this paper, we present CLEVA, a user-friendly platform crafted to holistically evaluate Chinese LLMs. Notably, CLEVA has been integrated into <a href="https://crfm.stanford.edu/helm/cleva/latest/">Stanford HELM</a>.</li> -->
                 <li>TL;DR: We present an end-to-end Chinese LLM evaluation platform with standardized prompting, contamination-aware data design, and large-scale evaluation across 23 Chinese LLMs. Notably, CLEVA has been integrated into <a href="https://crfm.stanford.edu/helm/cleva/latest/">Stanford HELM</a>.</li>
                 <li style="text-align: center;"><img src="img/cleva.jpg" width="750"></li>
             </ul>
