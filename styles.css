@@ -855,6 +855,93 @@ footer {
 	margin-bottom:1rem;
 	color:#515151
 }
+.typewriter-title {
+	position:relative;
+	display:inline-block;
+	overflow:hidden;
+	vertical-align:top
+}
+.typewriter-scheme-one {
+	--typewriter-text-color:#1f5f9d;
+	--typewriter-text-gradient:linear-gradient(90deg, #1f5f9d 0%, #147d6f 48%, #d97706 100%);
+	--typewriter-line-gradient:linear-gradient(90deg, #268bd2, #16a085, #ff8c00);
+	--typewriter-caret-color:#ff8c00;
+	--typewriter-shadow:0 0 16px rgba(38, 139, 210, .16)
+}
+.typewriter-scheme-two {
+	--typewriter-text-color:#303030;
+	--typewriter-text-gradient:linear-gradient(90deg, #8b8b8b 0%, #4d4d4d 48%, #111 100%);
+	--typewriter-line-gradient:linear-gradient(90deg, #b5b5b5, #666, #111);
+	--typewriter-caret-color:#111;
+	--typewriter-shadow:0 0 12px rgba(0, 0, 0, .12)
+}
+.typewriter-title:after {
+	content:"";
+	position:absolute;
+	left:0;
+	bottom:.15rem;
+	width:100%;
+	height:2px;
+	background:var(--typewriter-line-gradient);
+	border-radius:2px;
+	opacity:.65;
+	transform:scaleX(0);
+	transform-origin:left;
+	animation:typewriter-underline .75s ease .25s forwards
+}
+.typewriter-sizer {
+	visibility:hidden
+}
+.typewriter-live {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	color:var(--typewriter-text-color);
+	background:var(--typewriter-text-gradient);
+	-webkit-background-clip:text;
+	background-clip:text;
+	-webkit-text-fill-color:transparent;
+	text-shadow:var(--typewriter-shadow)
+}
+.typewriter-text {
+	white-space:normal
+}
+.typewriter-caret {
+	display:inline-block;
+	width:.08em;
+	height:1em;
+	margin-left:.08em;
+	background:var(--typewriter-caret-color);
+	border-radius:1px;
+	transform:translateY(.12em);
+	animation:typewriter-caret 1s steps(1) infinite
+}
+.typewriter-title.is-deleting .typewriter-caret {
+	animation-duration:.45s
+}
+@keyframes typewriter-caret {
+	0%,49% {
+		opacity:1
+	}
+	50%,100% {
+		opacity:0
+	}
+}
+@keyframes typewriter-underline {
+	to {
+		transform:scaleX(1)
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.typewriter-title:after,
+	.typewriter-caret {
+		animation:none
+	}
+	.typewriter-title:after {
+		transform:scaleX(1)
+	}
+}
 .mini-intro h1 a:hover,.mini-intro h1 a:visited {
 	color:inherit
 }

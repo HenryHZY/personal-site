@@ -26,7 +26,13 @@
   <div class="mini-intro">
 
   <img class="avatar" src="img/my_fig.png">
-  <h1 id="Zi-Yuan Hu">Zi-Yuan Hu (胡梓渊, Henry)</h1>
+  <!-- <h1 id="Zi-Yuan Hu" class="typewriter-title typewriter-scheme-one" aria-label="Zi-Yuan Hu (胡梓渊, Henry)"> -->
+  <h1 id="Zi-Yuan Hu" class="typewriter-title typewriter-scheme-two" aria-label="Zi-Yuan Hu (胡梓渊, Henry)">
+    <span class="typewriter-sizer" aria-hidden="true">Zi-Yuan Hu (胡梓渊, Henry)</span>
+    <span class="typewriter-live" aria-hidden="true">
+      <span class="typewriter-text">Zi-Yuan Hu (胡梓渊, Henry)</span><span class="typewriter-caret"></span>
+    </span>
+  </h1>
   <p class="img-left"><small><code class="language-plaintext highlighter-rouge">Email1: henryhuzy@gmail.com (preferred)</code></small></p>
   <p class="img-left"><small><code class="language-plaintext highlighter-rouge">Email2: zyhu22@cse.cuhk.edu.hk</code></small></p>
   <p class="img-left"><small><code class="language-plaintext highlighter-rouge">Address: Department of Computer Science and Engineering, <br>The Chinese University of Hong Kong (CUHK CSE)</code></small></p>
@@ -267,6 +273,77 @@
     This webpage template is borrowed from <a href="https://nlp.stanford.edu/~johnhew/">John Hewitt</a>.<br>
 </div>
 
+  <script>
+    (function () {
+      var title = document.querySelector(".typewriter-title");
+      if (!title) {
+        return;
+      }
+
+      var text = title.querySelector(".typewriter-text");
+      if (!text) {
+        return;
+      }
+
+      var fullText = title.getAttribute("aria-label") || text.textContent;
+      var reducedMotion = window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reducedMotion) {
+        text.textContent = fullText;
+        title.classList.add("is-finished");
+        return;
+      }
+
+      var characters = Array.from(fullText);
+      var index = 0;
+      var typeDelayMin = 42;
+      var typeDelayRange = 45;
+      var deleteDelay = 24;
+      var startDelay = 350;
+      var fullPause = 1300;
+      var emptyPause = 420;
+
+      text.textContent = "";
+
+      function typeNext() {
+        title.classList.add("is-typing");
+        title.classList.remove("is-deleting", "is-finished");
+
+        if (index < characters.length) {
+          var nextCharacter = characters[index];
+          text.textContent += nextCharacter;
+          index += 1;
+
+          var delay = nextCharacter === " " ? 180 : typeDelayMin + Math.random() * typeDelayRange;
+          window.setTimeout(typeNext, delay);
+          return;
+        }
+
+        window.setTimeout(function () {
+          title.classList.remove("is-typing");
+          title.classList.add("is-finished");
+          window.setTimeout(deleteNext, fullPause);
+        }, 180);
+      }
+
+      function deleteNext() {
+        title.classList.add("is-deleting");
+        title.classList.remove("is-typing", "is-finished");
+
+        if (index > 0) {
+          index -= 1;
+          text.textContent = characters.slice(0, index).join("");
+          window.setTimeout(deleteNext, deleteDelay);
+          return;
+        }
+
+        window.setTimeout(typeNext, emptyPause);
+      }
+
+      window.setTimeout(typeNext, startDelay);
+    }());
+  </script>
 </body>
 
 </html>
